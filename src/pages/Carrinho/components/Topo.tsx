@@ -2,14 +2,18 @@ import React from "react";
 import { StyleSheet, Image, Dimensions, Text, View } from "react-native";
 
 
-import topo from '../../../assets/topo.png';
+import topo from '../../../../assets/topo.png';
 const width = Dimensions.get('screen').width;
 
-export default function Topo() {
+type Props = {
+    titulo: string;
+}
+
+export default function Topo({titulo}: Props) {
 
 return<>
 <Image source={topo} style={estilos.topo}/>
-    <Text style={estilos.titulo}>Detalhe do Carrinho</Text>
+    <Text style={estilos.titulo}>{titulo}</Text>
     </>
 }
 
